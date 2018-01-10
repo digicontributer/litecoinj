@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.litecoinj.store;
+package org.digibytej.store;
 
-import org.litecoinj.core.Address;
-import org.litecoinj.core.ECKey;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.core.StoredBlock;
-import org.litecoinj.params.UnitTestParams;
+import org.digibytej.core.Address;
+import org.digibytej.core.ECKey;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.core.StoredBlock;
+import org.digibytej.params.UnitTestParams;
 import org.junit.Test;
 
 import java.io.File;

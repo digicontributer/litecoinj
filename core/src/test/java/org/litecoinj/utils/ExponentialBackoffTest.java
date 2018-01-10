@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.litecoinj.utils;
+package org.digibytej.utils;
 
-import org.litecoinj.core.Utils;
+import org.digibytej.core.Utils;
 
 import org.junit.Before;
 import org.junit.Test;

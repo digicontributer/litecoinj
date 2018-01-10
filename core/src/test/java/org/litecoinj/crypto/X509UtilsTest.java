@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.litecoinj.crypto;
+package org.digibytej.crypto;
 
 import org.junit.Test;
 

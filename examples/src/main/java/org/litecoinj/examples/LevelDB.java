@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
 import java.net.InetAddress;
-import org.litecoinj.core.FullPrunedBlockChain;
-import org.litecoinj.core.PeerGroup;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.store.FullPrunedBlockStore;
-import org.litecoinj.store.LevelDBFullPrunedBlockStore;
+import org.digibytej.core.FullPrunedBlockChain;
+import org.digibytej.core.PeerGroup;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.store.FullPrunedBlockStore;
+import org.digibytej.store.LevelDBFullPrunedBlockStore;
 
 public class LevelDB {
     public static void main(String[] args) throws Exception {

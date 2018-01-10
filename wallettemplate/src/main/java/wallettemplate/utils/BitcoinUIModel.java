@@ -16,10 +16,10 @@
 
 package wallettemplate.utils;
 
-import org.litecoinj.core.listeners.DownloadProgressTracker;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.listeners.WalletChangeEventListener;
-import org.litecoinj.core.*;
+import org.digibytej.core.listeners.DownloadProgressTracker;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.listeners.WalletChangeEventListener;
+import org.digibytej.core.*;
 import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;
@@ -29,7 +29,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import java.util.Date;
 
 /**
- * A class that exposes relevant litecoin stuff as JavaFX bindable properties.
+ * A class that exposes relevant digibyte stuff as JavaFX bindable properties.
  */
 public class BitcoinUIModel {
     private SimpleObjectProperty<Address> address = new SimpleObjectProperty<>();

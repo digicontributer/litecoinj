@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.listeners.PeerConnectedEventListener;
-import org.litecoinj.core.listeners.PeerDisconnectedEventListener;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.core.Peer;
-import org.litecoinj.core.PeerAddress;
-import org.litecoinj.core.VersionMessage;
-import org.litecoinj.net.discovery.DnsDiscovery;
-import org.litecoinj.net.discovery.PeerDiscoveryException;
-import org.litecoinj.net.NioClientManager;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.utils.BriefLogFormatter;
+import org.digibytej.core.listeners.PeerConnectedEventListener;
+import org.digibytej.core.listeners.PeerDisconnectedEventListener;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.core.Peer;
+import org.digibytej.core.PeerAddress;
+import org.digibytej.core.VersionMessage;
+import org.digibytej.net.discovery.DnsDiscovery;
+import org.digibytej.net.discovery.PeerDiscoveryException;
+import org.digibytej.net.NioClientManager;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.litecoinj.net;
+package org.digibytej.net;
 
-import org.litecoinj.core.Utils;
+import org.digibytej.core.Utils;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
-import org.litecoin.paymentchannel.Protos;
-import org.litecoin.paymentchannel.Protos.TwoWayChannelMessage;
+import org.digibyte.paymentchannel.Protos;
+import org.digibyte.paymentchannel.Protos.TwoWayChannelMessage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

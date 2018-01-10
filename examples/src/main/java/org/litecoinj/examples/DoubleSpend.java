@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.listeners.PreMessageReceivedEventListener;
-import org.litecoinj.core.*;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.RegTestParams;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.listeners.PreMessageReceivedEventListener;
+import org.digibytej.core.*;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.RegTestParams;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.Wallet;
 
 import java.io.File;
 
-import static org.litecoinj.core.Coin.*;
+import static org.digibytej.core.Coin.*;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double

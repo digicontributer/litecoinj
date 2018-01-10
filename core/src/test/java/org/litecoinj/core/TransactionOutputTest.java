@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import com.google.common.collect.ImmutableList;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.script.Script;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.testing.TestWithWallet;
-import org.litecoinj.wallet.SendRequest;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.script.Script;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.testing.TestWithWallet;
+import org.digibytej.wallet.SendRequest;
 import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Before;

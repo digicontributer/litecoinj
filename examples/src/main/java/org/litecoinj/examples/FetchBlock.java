@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.*;
-import org.litecoinj.net.discovery.DnsDiscovery;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.utils.BriefLogFormatter;
+import org.digibytej.core.*;
+import org.digibytej.net.discovery.DnsDiscovery;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.utils.BriefLogFormatter;
 
 import java.net.InetAddress;
 import java.util.LinkedList;

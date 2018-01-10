@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package org.litecoinj.wallet;
+package org.digibytej.wallet;
 
 import com.google.common.collect.*;
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.*;
-import org.litecoinj.params.*;
-import org.litecoinj.script.*;
-import org.litecoinj.testing.FakeTxBuilder;
-import org.litecoinj.wallet.DefaultRiskAnalysis.*;
+import org.digibytej.core.*;
+import org.digibytej.crypto.*;
+import org.digibytej.params.*;
+import org.digibytej.script.*;
+import org.digibytej.testing.FakeTxBuilder;
+import org.digibytej.wallet.DefaultRiskAnalysis.*;
 import org.junit.*;
 
 import java.util.*;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.script.ScriptOpCodes.*;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.script.ScriptOpCodes.*;
 import static org.junit.Assert.*;
 
 public class DefaultRiskAnalysisTest {

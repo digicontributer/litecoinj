@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.litecoinj.wallet;
+package org.digibytej.wallet;
 
-import org.litecoinj.core.BloomFilter;
-import org.litecoinj.core.ECKey;
-import org.litecoinj.core.Utils;
-import org.litecoinj.crypto.KeyCrypter;
-import org.litecoinj.crypto.KeyCrypterException;
-import org.litecoinj.crypto.KeyCrypterScrypt;
-import org.litecoinj.utils.Threading;
+import org.digibytej.core.BloomFilter;
+import org.digibytej.core.ECKey;
+import org.digibytej.core.Utils;
+import org.digibytej.crypto.KeyCrypter;
+import org.digibytej.crypto.KeyCrypterException;
+import org.digibytej.crypto.KeyCrypterScrypt;
+import org.digibytej.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
-import org.litecoinj.wallet.listeners.AbstractKeyChainEventListener;
+import org.digibytej.wallet.listeners.AbstractKeyChainEventListener;
 import org.junit.Before;
 import org.junit.Test;
 

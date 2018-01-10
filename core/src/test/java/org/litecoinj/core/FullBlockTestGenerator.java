@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import org.litecoinj.core.Transaction.SigHash;
-import org.litecoinj.crypto.TransactionSignature;
-import org.litecoinj.script.Script;
-import org.litecoinj.script.ScriptBuilder;
+import org.digibytej.core.Transaction.SigHash;
+import org.digibytej.crypto.TransactionSignature;
+import org.digibytej.script.Script;
+import org.digibytej.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import javax.annotation.Nullable;
@@ -32,8 +32,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.script.ScriptOpCodes.*;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 

@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.*;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.script.Script;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.listeners.KeyChainEventListener;
-import org.litecoinj.wallet.listeners.ScriptsChangeEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsSentEventListener;
+import org.digibytej.core.*;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.script.Script;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.listeners.KeyChainEventListener;
+import org.digibytej.wallet.listeners.ScriptsChangeEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsSentEventListener;
 
 import java.io.File;
 import java.util.List;
 
-import org.litecoinj.core.listeners.TransactionConfidenceEventListener;
+import org.digibytej.core.listeners.TransactionConfidenceEventListener;
 
 /**
- * The following example shows how to use the by litecoinj provided WalletAppKit.
- * The WalletAppKit class wraps the boilerplate (Peers, BlockChain, BlockStorage, Wallet) needed to set up a new SPV litecoinj app.
+ * The following example shows how to use the by digibytej provided WalletAppKit.
+ * The WalletAppKit class wraps the boilerplate (Peers, BlockChain, BlockStorage, Wallet) needed to set up a new SPV digibytej app.
  * 
  * In this example we also define a WalletEventListener class with implementors that are called when the wallet changes (for example sending/receiving money)
  */
@@ -46,8 +46,8 @@ public class Kit {
         // - MainNetParams
         // - TestNet3Params
         // - RegTestParams
-        // While developing your application you probably want to use the Regtest mode and run your local litecoin network. Run bitcoind with the -regtest flag
-        // To test you app with a real network you can use the testnet. The testnet is an alternative litecoin network that follows the same rules as main network. Coins are worth nothing and you can get coins for example from http://faucet.xeno-genesis.com/
+        // While developing your application you probably want to use the Regtest mode and run your local digibyte network. Run bitcoind with the -regtest flag
+        // To test you app with a real network you can use the testnet. The testnet is an alternative digibyte network that follows the same rules as main network. Coins are worth nothing and you can get coins for example from http://faucet.xeno-genesis.com/
         // 
         // For more information have a look at: https://bitcoinj.github.io/testing and https://bitcoin.org/en/developer-examples#testing-applications
         NetworkParameters params = TestNet3Params.get();
@@ -61,7 +61,7 @@ public class Kit {
         //kit.connectToLocalHost();
 
         // Now we start the kit and sync the blockchain.
-        // litecoinj is working a lot with the Google Guava libraries. The WalletAppKit extends the AbstractIdleService. Have a look at the introduction to Guava services: https://github.com/google/guava/wiki/ServiceExplained
+        // digibyte is working a lot with the Google Guava libraries. The WalletAppKit extends the AbstractIdleService. Have a look at the introduction to Guava services: https://github.com/google/guava/wiki/ServiceExplained
         kit.startAsync();
         kit.awaitRunning();
 

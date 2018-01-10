@@ -15,32 +15,32 @@
  * limitations under the License.
  */
 
-package org.litecoinj.store;
+package org.digibytej.store;
 
-import org.litecoinj.core.*;
-import org.litecoinj.core.Transaction.Purpose;
-import org.litecoinj.core.TransactionConfidence.ConfidenceType;
-import org.litecoinj.crypto.DeterministicKey;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.testing.FakeTxBuilder;
-import org.litecoinj.testing.FooWalletExtension;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.DeterministicKeyChain;
-import org.litecoinj.wallet.KeyChain;
+import org.digibytej.core.*;
+import org.digibytej.core.Transaction.Purpose;
+import org.digibytej.core.TransactionConfidence.ConfidenceType;
+import org.digibytej.crypto.DeterministicKey;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.testing.FakeTxBuilder;
+import org.digibytej.testing.FooWalletExtension;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.DeterministicKeyChain;
+import org.digibytej.wallet.KeyChain;
 import com.google.protobuf.ByteString;
 
-import org.litecoinj.wallet.MarriedKeyChain;
-import org.litecoinj.wallet.Protos;
-import org.litecoinj.wallet.UnreadableWalletException;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.WalletExtension;
-import org.litecoinj.wallet.WalletProtobufSerializer;
-import org.litecoinj.wallet.WalletTransaction;
-import org.litecoinj.wallet.WalletTransaction.Pool;
-import org.litecoinj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.digibytej.wallet.MarriedKeyChain;
+import org.digibytej.wallet.Protos;
+import org.digibytej.wallet.UnreadableWalletException;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.WalletExtension;
+import org.digibytej.wallet.WalletProtobufSerializer;
+import org.digibytej.wallet.WalletTransaction;
+import org.digibytej.wallet.WalletTransaction.Pool;
+import org.digibytej.wallet.listeners.WalletCoinsReceivedEventListener;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -54,8 +54,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.testing.FakeTxBuilder.createFakeTx;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 

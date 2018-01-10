@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import junit.framework.TestCase;
 

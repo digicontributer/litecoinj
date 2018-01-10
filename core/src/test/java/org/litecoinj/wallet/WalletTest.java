@@ -15,44 +15,44 @@
  * limitations under the License.
  */
 
-package org.litecoinj.wallet;
+package org.digibytej.wallet;
 
-import org.litecoinj.core.listeners.TransactionConfidenceEventListener;
-import org.litecoinj.core.AbstractBlockChain;
-import org.litecoinj.core.Address;
-import org.litecoinj.core.Block;
-import org.litecoinj.core.BlockChain;
-import org.litecoinj.core.Coin;
-import org.litecoinj.core.ECKey;
-import org.litecoinj.core.InsufficientMoneyException;
-import org.litecoinj.core.PeerAddress;
-import org.litecoinj.core.Sha256Hash;
-import org.litecoinj.core.StoredBlock;
-import org.litecoinj.core.Transaction;
-import org.litecoinj.core.TransactionConfidence;
-import org.litecoinj.core.TransactionInput;
-import org.litecoinj.core.TransactionOutPoint;
-import org.litecoinj.core.TransactionOutput;
-import org.litecoinj.core.Utils;
-import org.litecoinj.core.VerificationException;
-import org.litecoinj.core.TransactionConfidence.ConfidenceType;
-import org.litecoinj.crypto.*;
-import org.litecoinj.script.Script;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.signers.StatelessTransactionSigner;
-import org.litecoinj.signers.TransactionSigner;
-import org.litecoinj.store.BlockStoreException;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.testing.*;
-import org.litecoinj.utils.ExchangeRate;
-import org.litecoinj.utils.Fiat;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.Wallet.BalanceType;
-import org.litecoinj.wallet.WalletTransaction.Pool;
-import org.litecoinj.wallet.listeners.KeyChainEventListener;
-import org.litecoinj.wallet.listeners.WalletChangeEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsSentEventListener;
+import org.digibytej.core.listeners.TransactionConfidenceEventListener;
+import org.digibytej.core.AbstractBlockChain;
+import org.digibytej.core.Address;
+import org.digibytej.core.Block;
+import org.digibytej.core.BlockChain;
+import org.digibytej.core.Coin;
+import org.digibytej.core.ECKey;
+import org.digibytej.core.InsufficientMoneyException;
+import org.digibytej.core.PeerAddress;
+import org.digibytej.core.Sha256Hash;
+import org.digibytej.core.StoredBlock;
+import org.digibytej.core.Transaction;
+import org.digibytej.core.TransactionConfidence;
+import org.digibytej.core.TransactionInput;
+import org.digibytej.core.TransactionOutPoint;
+import org.digibytej.core.TransactionOutput;
+import org.digibytej.core.Utils;
+import org.digibytej.core.VerificationException;
+import org.digibytej.core.TransactionConfidence.ConfidenceType;
+import org.digibytej.crypto.*;
+import org.digibytej.script.Script;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.signers.StatelessTransactionSigner;
+import org.digibytej.signers.TransactionSigner;
+import org.digibytej.store.BlockStoreException;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.testing.*;
+import org.digibytej.utils.ExchangeRate;
+import org.digibytej.utils.Fiat;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.Wallet.BalanceType;
+import org.digibytej.wallet.WalletTransaction.Pool;
+import org.digibytej.wallet.listeners.KeyChainEventListener;
+import org.digibytej.wallet.listeners.WalletChangeEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsSentEventListener;
 import org.easymock.EasyMock;
 
 import com.google.common.collect.ImmutableList;
@@ -60,7 +60,7 @@ import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 
-import org.litecoinj.wallet.Protos.Wallet.EncryptionType;
+import org.digibytej.wallet.Protos.Wallet.EncryptionType;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -79,9 +79,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.core.Utils.HEX;
-import static org.litecoinj.testing.FakeTxBuilder.*;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.core.Utils.HEX;
+import static org.digibytej.testing.FakeTxBuilder.*;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -804,7 +804,7 @@ public class WalletTest extends TestWithWallet {
         Transaction send1 = checkNotNull(wallet.createSend(OTHER_ADDRESS, value2));
         Transaction send2 = checkNotNull(wallet.createSend(OTHER_ADDRESS, value2));
         byte[] buf = send1.bitcoinSerialize();
-        buf[43] = 0;  // Break the signature: litecoinj won't check in SPV mode and this is easier than other mutations.
+        buf[43] = 0;  // Break the signature: digibytej won't check in SPV mode and this is easier than other mutations.
         send1 = PARAMS.getDefaultSerializer().makeTransaction(buf);
         wallet.commitTx(send2);
         wallet.allowSpendingUnconfirmedTransactions();
@@ -863,7 +863,7 @@ public class WalletTest extends TestWithWallet {
             }
         });
 
-        // Receive 1 LTC.
+        // Receive 1 DGB.
         Coin nanos = COIN;
         sendMoneyToWallet(AbstractBlockChain.NewBlockType.BEST_CHAIN, nanos);
         Transaction received = wallet.getTransactions(false).iterator().next();
@@ -1393,7 +1393,7 @@ public class WalletTest extends TestWithWallet {
         assertEquals(t2, txn[0]);
         assertEquals(nanos, bigints[0]);
         assertEquals(halfNanos, bigints[1]);
-        // Our balance is now 0.50 LTC
+        // Our balance is now 0.50 DGB
         assertEquals(halfNanos, wallet.getBalance(Wallet.BalanceType.ESTIMATED));
     }
 
@@ -1530,7 +1530,7 @@ public class WalletTest extends TestWithWallet {
         // We should have a zero available balance before the next block.
         assertEquals(ZERO, wallet.getBalance());
         sendMoneyToWallet(AbstractBlockChain.NewBlockType.BEST_CHAIN, outbound1);
-        // We should have a balance of 1 LTC after the block is received.
+        // We should have a balance of 1 DGB after the block is received.
         assertEquals(coin1, wallet.getBalance());
     }
 
@@ -1775,7 +1775,7 @@ public class WalletTest extends TestWithWallet {
     @Test
     public void autosaveImmediate() throws Exception {
         // Test that the wallet will save itself automatically when it changes.
-        File f = File.createTempFile("litecoinj-unit-test", null);
+        File f = File.createTempFile("digibytej-unit-test", null);
         Sha256Hash hash1 = Sha256Hash.of(f);
         // Start with zero delay and ensure the wallet file changes after adding a key.
         wallet.autosaveToFile(f, 0, TimeUnit.SECONDS, null);
@@ -1797,7 +1797,7 @@ public class WalletTest extends TestWithWallet {
         // an auto-save cycle of 1 second.
         final File[] results = new File[2];
         final CountDownLatch latch = new CountDownLatch(3);
-        File f = File.createTempFile("litecoinj-unit-test", null);
+        File f = File.createTempFile("digibytej-unit-test", null);
         Sha256Hash hash1 = Sha256Hash.of(f);
         wallet.autosaveToFile(f, 1, TimeUnit.SECONDS,
                 new WalletFiles.Listener() {
@@ -2188,7 +2188,7 @@ public class WalletTest extends TestWithWallet {
 
     @Test
     public void opReturnTwoOutputsTest() throws Exception {
-        // Tests sending transaction where one output transfers LTC, the other one writes OP_RETURN.
+        // Tests sending transaction where one output transfers DGB, the other one writes OP_RETURN.
         receiveATransaction(wallet, myAddress);
         Transaction tx = new Transaction(PARAMS);
         Coin messagePrice = Coin.ZERO;
@@ -3420,7 +3420,7 @@ public class WalletTest extends TestWithWallet {
 
     @Test
     public void totalReceivedSent() throws Exception {
-        // Receive 4 LTC in 2 separate transactions
+        // Receive 4 DGB in 2 separate transactions
         Transaction toMe1 = createFakeTxWithoutChangeAddress(PARAMS, COIN.multiply(2), myAddress);
         Transaction toMe2 = createFakeTxWithoutChangeAddress(PARAMS, COIN.multiply(2), myAddress);
         sendMoneyToWallet(AbstractBlockChain.NewBlockType.BEST_CHAIN, toMe1, toMe2);
@@ -3428,7 +3428,7 @@ public class WalletTest extends TestWithWallet {
         // Check we calculate the total received correctly
         assertEquals(Coin.COIN.multiply(4), wallet.getTotalReceived());
 
-        // Send 3 LTC in a single transaction
+        // Send 3 DGB in a single transaction
         SendRequest req = SendRequest.to(OTHER_ADDRESS, Coin.COIN.multiply(3));
         wallet.completeTx(req);
         sendMoneyToWallet(AbstractBlockChain.NewBlockType.BEST_CHAIN, req.tx);

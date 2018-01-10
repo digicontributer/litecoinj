@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.litecoinj.utils;
+package org.digibytej.utils;
 
-import org.litecoinj.core.BlockChain;
-import org.litecoinj.core.Context;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.core.StoredBlock;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.BlockStoreException;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.testing.FakeTxBuilder;
+import org.digibytej.core.BlockChain;
+import org.digibytej.core.Context;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.core.StoredBlock;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.BlockStoreException;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.testing.FakeTxBuilder;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

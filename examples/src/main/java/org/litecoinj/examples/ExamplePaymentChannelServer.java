@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import org.litecoinj.core.Coin;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.core.Sha256Hash;
-import org.litecoinj.core.VerificationException;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.RegTestParams;
-import org.litecoinj.protocols.channels.*;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.WalletExtension;
+import org.digibytej.core.Coin;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.core.Sha256Hash;
+import org.digibytej.core.VerificationException;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.RegTestParams;
+import org.digibytej.protocols.channels.*;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.WalletExtension;
 
 import com.google.common.collect.ImmutableList;
 

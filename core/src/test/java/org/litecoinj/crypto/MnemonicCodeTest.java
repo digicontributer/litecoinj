@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.litecoinj.crypto;
+package org.digibytej.crypto;
 
-import org.litecoinj.core.Utils;
+import org.digibytej.core.Utils;
 import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.litecoinj.core.Utils.HEX;
+import static org.digibytej.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 public class MnemonicCodeTest {

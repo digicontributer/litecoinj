@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -24,24 +24,24 @@ import java.util.EnumSet;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import org.litecoinj.core.Coin;
-import org.litecoinj.core.ECKey;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.core.ScriptException;
-import org.litecoinj.core.Transaction;
-import org.litecoinj.core.TransactionInput;
-import org.litecoinj.core.TransactionOutput;
-import org.litecoinj.core.Utils;
-import org.litecoinj.crypto.TransactionSignature;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.script.Script;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.script.ScriptChunk;
-import static org.litecoinj.script.ScriptOpCodes.getOpCodeName;
-import org.litecoinj.signers.LocalTransactionSigner;
-import org.litecoinj.signers.TransactionSigner.ProposedTransaction;
-import org.litecoinj.wallet.KeyBag;
-import org.litecoinj.wallet.RedeemData;
+import org.digibytej.core.Coin;
+import org.digibytej.core.ECKey;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.core.ScriptException;
+import org.digibytej.core.Transaction;
+import org.digibytej.core.TransactionInput;
+import org.digibytej.core.TransactionOutput;
+import org.digibytej.core.Utils;
+import org.digibytej.crypto.TransactionSignature;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.script.Script;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.script.ScriptChunk;
+import static org.digibytej.script.ScriptOpCodes.getOpCodeName;
+import org.digibytej.signers.LocalTransactionSigner;
+import org.digibytej.signers.TransactionSigner.ProposedTransaction;
+import org.digibytej.wallet.KeyBag;
+import org.digibytej.wallet.RedeemData;
 
 /**
  * Test case generator for transactions with low-S and high-S signatures, to

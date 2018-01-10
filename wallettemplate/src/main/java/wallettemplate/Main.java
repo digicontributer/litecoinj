@@ -18,12 +18,12 @@ package wallettemplate;
 
 import com.google.common.util.concurrent.*;
 import javafx.scene.input.*;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.*;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.DeterministicSeed;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.*;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.DeterministicSeed;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -100,7 +100,7 @@ public class Main extends Application {
 
         // Make log output concise.
         BriefLogFormatter.init();
-        // Tell litecoinj to run event handlers on the JavaFX UI thread. This keeps things simple and means
+        // Tell digibytej to run event handlers on the JavaFX UI thread. This keeps things simple and means
         // we cannot forget to switch threads when adding event handlers. Unfortunately, the DownloadListener
         // we give to the app kit is currently an exception and runs on a library thread. It'll get fixed in
         // a future version.

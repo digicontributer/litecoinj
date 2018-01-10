@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.litecoinj.crypto;
+package org.digibytej.crypto;
 
 import com.google.common.collect.ImmutableList;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.litecoinj.core.Utils.HEX;
+import static org.digibytej.core.Utils.HEX;
 import java.util.List;
 
 public class HDUtilsTest {

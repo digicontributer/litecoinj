@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.KeyCrypterException;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.RegTestParams;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.digibytej.core.*;
+import org.digibytej.crypto.KeyCrypterException;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.RegTestParams;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -84,7 +84,7 @@ public class ForwardingService {
         kit.wallet().addCoinsReceivedEventListener(new WalletCoinsReceivedEventListener() {
             @Override
             public void onCoinsReceived(Wallet w, Transaction tx, Coin prevBalance, Coin newBalance) {
-                // Runs in the dedicated "user thread" (see litecoinj docs for more info on this).
+                // Runs in the dedicated "user thread" (see digibytej docs for more info on this).
                 //
                 // The transaction "tx" can either be pending, or included into a block (we didn't see the broadcast).
                 Coin value = tx.getValueSentToMe(w);

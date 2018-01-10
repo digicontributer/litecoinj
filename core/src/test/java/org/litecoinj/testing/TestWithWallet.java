@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.litecoinj.testing;
+package org.digibytej.testing;
 
-import org.litecoinj.core.*;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.*;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.Wallet;
 
 import javax.annotation.Nullable;
 
-import static org.litecoinj.testing.FakeTxBuilder.createFakeBlock;
-import static org.litecoinj.testing.FakeTxBuilder.createFakeTx;
+import static org.digibytej.testing.FakeTxBuilder.createFakeBlock;
+import static org.digibytej.testing.FakeTxBuilder.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

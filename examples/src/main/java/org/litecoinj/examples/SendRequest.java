@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-import org.litecoinj.core.*;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.Wallet.BalanceType;
+import org.digibytej.core.*;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.Wallet.BalanceType;
 
 import java.io.File;
 

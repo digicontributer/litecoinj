@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.litecoinj.protocols.payments;
+package org.digibytej.protocols.payments;
 
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.X509Utils;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.protocols.payments.PaymentProtocol.Output;
-import org.litecoinj.protocols.payments.PaymentProtocol.PkiVerificationData;
-import org.litecoinj.protocols.payments.PaymentProtocolException.PkiVerificationException;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.testing.FakeTxBuilder;
-import org.litecoin.protocols.payments.Protos;
-import org.litecoin.protocols.payments.Protos.Payment;
-import org.litecoin.protocols.payments.Protos.PaymentACK;
-import org.litecoin.protocols.payments.Protos.PaymentRequest;
+import org.digibytej.core.*;
+import org.digibytej.crypto.X509Utils;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.protocols.payments.PaymentProtocol.Output;
+import org.digibytej.protocols.payments.PaymentProtocol.PkiVerificationData;
+import org.digibytej.protocols.payments.PaymentProtocolException.PkiVerificationException;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.testing.FakeTxBuilder;
+import org.digibyte.protocols.payments.Protos;
+import org.digibyte.protocols.payments.Protos.Payment;
+import org.digibyte.protocols.payments.Protos.PaymentACK;
+import org.digibyte.protocols.payments.Protos.PaymentRequest;
 import org.junit.Before;
 import org.junit.Test;
 

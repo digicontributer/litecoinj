@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import com.google.common.util.concurrent.*;
-import org.litecoinj.core.listeners.TransactionConfidenceEventListener;
-import org.litecoinj.testing.*;
-import org.litecoinj.utils.*;
-import org.litecoinj.wallet.SendRequest;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.listeners.TransactionConfidenceEventListener;
+import org.digibytej.testing.*;
+import org.digibytej.utils.*;
+import org.digibytej.wallet.SendRequest;
+import org.digibytej.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -31,7 +31,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 import static com.google.common.base.Preconditions.*;
-import static org.litecoinj.core.Coin.*;
+import static org.digibytej.core.Coin.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)
@@ -226,7 +226,7 @@ public class TransactionBroadcastTest extends TestWithPeerGroup {
             t1 = (Transaction) m;
         }
         assertNotNull(t1);
-        // 49 LTC in change.
+        // 49 DGB in change.
         assertEquals(valueOf(49, 0), t1.getValueSentToMe(wallet));
         // The future won't complete until it's heard back from the network on p2.
         InventoryMessage inv = new InventoryMessage(PARAMS);

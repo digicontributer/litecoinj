@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.litecoinj.protocols.channels;
+package org.digibytej.protocols.channels;
 
-import org.litecoinj.core.*;
-import org.litecoinj.protocols.channels.PaymentChannelClient.VersionSelector;
-import org.litecoinj.testing.TestWithWallet;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.WalletExtension;
-import org.litecoinj.wallet.WalletFiles;
-import org.litecoinj.wallet.WalletProtobufSerializer;
+import org.digibytej.core.*;
+import org.digibytej.protocols.channels.PaymentChannelClient.VersionSelector;
+import org.digibytej.testing.TestWithWallet;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.WalletExtension;
+import org.digibytej.wallet.WalletFiles;
+import org.digibytej.wallet.WalletProtobufSerializer;
 
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
-import org.litecoin.paymentchannel.Protos;
+import org.digibyte.paymentchannel.Protos;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,11 +48,11 @@ import java.util.Collection;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.protocols.channels.PaymentChannelClient.VersionSelector.*;
-import static org.litecoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import static org.litecoinj.testing.FakeTxBuilder.createFakeBlock;
-import static org.litecoin.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.protocols.channels.PaymentChannelClient.VersionSelector.*;
+import static org.digibytej.protocols.channels.PaymentChannelCloseException.CloseReason;
+import static org.digibytej.testing.FakeTxBuilder.createFakeBlock;
+import static org.digibyte.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
@@ -557,7 +557,7 @@ public class ChannelConnectionTest extends TestWithWallet {
     private static Wallet roundTripClientWallet(Wallet wallet) throws Exception {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
-        org.litecoinj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.digibytej.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         StoredPaymentChannelClientStates state = new StoredPaymentChannelClientStates(null, failBroadcaster);
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
@@ -566,7 +566,7 @@ public class ChannelConnectionTest extends TestWithWallet {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
         StoredPaymentChannelServerStates state = new StoredPaymentChannelServerStates(null, failBroadcaster);
-        org.litecoinj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.digibytej.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
 

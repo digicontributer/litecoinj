@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.crypto;
+package org.digibytej.crypto;
 
-import org.litecoinj.core.*;
-import org.litecoinj.params.*;
+import org.digibytej.core.*;
+import org.digibytej.params.*;
 import org.junit.*;
 import org.spongycastle.crypto.params.*;
 
-import static org.litecoinj.core.Utils.*;
+import static org.digibytej.core.Utils.*;
 import static org.junit.Assert.*;
 
 /**

@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.litecoinj.testing;
+package org.digibytej.testing;
 
-import org.litecoinj.core.listeners.PeerDisconnectedEventListener;
-import org.litecoinj.core.listeners.PreMessageReceivedEventListener;
-import org.litecoinj.core.*;
-import org.litecoinj.net.*;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.listeners.PeerDisconnectedEventListener;
+import org.digibytej.core.listeners.PreMessageReceivedEventListener;
+import org.digibytej.core.*;
+import org.digibytej.net.*;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.Wallet;
 
 import com.google.common.util.concurrent.SettableFuture;
 

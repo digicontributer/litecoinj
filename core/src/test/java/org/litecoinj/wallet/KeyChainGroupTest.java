@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.wallet;
+package org.digibytej.wallet;
 
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.*;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.listeners.KeyChainEventListener;
+import org.digibytej.core.*;
+import org.digibytej.crypto.*;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.listeners.KeyChainEventListener;
 
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;

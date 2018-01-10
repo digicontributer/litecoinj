@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 import java.util.List;
 
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.testing.FakeTxBuilder;
-import org.litecoinj.wallet.AllowUnconfirmedCoinSelector;
-import org.litecoinj.wallet.SendRequest;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.testing.FakeTxBuilder;
+import org.digibytej.wallet.AllowUnconfirmedCoinSelector;
+import org.digibytej.wallet.SendRequest;
+import org.digibytej.wallet.Wallet;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;

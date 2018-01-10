@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.wallet.KeyChainGroup;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.wallet.KeyChainGroup;
+import org.digibytej.wallet.Wallet;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.litecoinj.core.Utils.HEX;
+import static org.digibytej.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BloomFilterTest {

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.litecoinj.protocols.channels;
+package org.digibytej.protocols.channels;
 
-import org.litecoinj.core.*;
-import org.litecoinj.script.Script;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.testing.TestWithWallet;
-import org.litecoinj.wallet.SendRequest;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.*;
+import org.digibytej.script.Script;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.testing.TestWithWallet;
+import org.digibytej.wallet.SendRequest;
+import org.digibytej.wallet.Wallet;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -40,9 +40,9 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.testing.FakeTxBuilder.createFakeTx;
-import static org.litecoinj.testing.FakeTxBuilder.makeSolvedTestBlock;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.testing.FakeTxBuilder.createFakeTx;
+import static org.digibytej.testing.FakeTxBuilder.makeSolvedTestBlock;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)

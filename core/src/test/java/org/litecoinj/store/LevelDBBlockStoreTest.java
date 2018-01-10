@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.litecoinj.store;
+package org.digibytej.store;
 
-import org.litecoinj.core.*;
-import org.litecoinj.params.*;
+import org.digibytej.core.*;
+import org.digibytej.params.*;
 import org.junit.*;
 
 import java.io.*;

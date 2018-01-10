@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.*;
 import com.google.common.net.*;
 import com.google.common.util.concurrent.*;
-import org.litecoinj.core.listeners.*;
-import org.litecoinj.net.discovery.*;
-import org.litecoinj.testing.*;
-import org.litecoinj.utils.*;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.listeners.*;
+import org.digibytej.net.discovery.*;
+import org.digibytej.testing.*;
+import org.digibytej.utils.*;
+import org.digibytej.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -36,7 +36,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
 
-import static org.litecoinj.core.Coin.*;
+import static org.digibytej.core.Coin.*;
 import static org.junit.Assert.*;
 
 

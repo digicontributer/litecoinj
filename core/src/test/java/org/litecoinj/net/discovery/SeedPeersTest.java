@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.litecoinj.net.discovery;
+package org.digibytej.net.discovery;
 
-import org.litecoinj.params.MainNetParams;
+import org.digibytej.params.MainNetParams;
 import org.junit.Test;
 
 import java.net.InetSocketAddress;

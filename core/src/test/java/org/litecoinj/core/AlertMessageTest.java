@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.params.UnitTestParams;
+import org.digibytej.params.UnitTestParams;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.litecoinj.core.Utils.HEX;
+import static org.digibytej.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

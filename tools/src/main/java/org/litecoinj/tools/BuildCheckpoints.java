@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.litecoinj.tools;
+package org.digibytej.tools;
 
-import org.litecoinj.core.listeners.NewBestBlockListener;
-import org.litecoinj.core.*;
-import org.litecoinj.net.discovery.DnsDiscovery;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.RegTestParams;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
+import org.digibytej.core.listeners.NewBestBlockListener;
+import org.digibytej.core.*;
+import org.digibytej.net.discovery.DnsDiscovery;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.RegTestParams;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import joptsimple.OptionParser;
@@ -92,7 +92,7 @@ public class BuildCheckpoints {
                 throw new RuntimeException("Unreachable.");
         }
 
-        // Configure litecoinj to fetch only headers, not save them to disk, connect to a local fully synced/validated
+        // Configure digibytej to fetch only headers, not save them to disk, connect to a local fully synced/validated
         // node and to save block headers that are on interval boundaries, as long as they are <1 month old.
         final BlockStore store = new MemoryBlockStore(params);
         final BlockChain chain = new BlockChain(params, store);

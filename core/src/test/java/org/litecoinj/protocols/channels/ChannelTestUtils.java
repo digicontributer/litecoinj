@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.litecoinj.protocols.channels;
+package org.digibytej.protocols.channels;
 
-import org.litecoinj.core.Coin;
-import org.litecoinj.core.Sha256Hash;
-import org.litecoinj.core.TransactionBroadcaster;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.Coin;
+import org.digibytej.core.Sha256Hash;
+import org.digibytej.core.TransactionBroadcaster;
+import org.digibytej.wallet.Wallet;
 
 import com.google.common.base.Objects;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
-import org.litecoin.paymentchannel.Protos;
+import org.digibyte.paymentchannel.Protos;
 import org.spongycastle.crypto.params.KeyParameter;
 
 import javax.annotation.Nullable;

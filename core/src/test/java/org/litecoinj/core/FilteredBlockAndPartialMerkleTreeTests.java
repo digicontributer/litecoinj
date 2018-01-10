@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import com.google.common.collect.*;
-import org.litecoinj.core.TransactionConfidence.*;
-import org.litecoinj.store.*;
-import org.litecoinj.testing.*;
-import org.litecoinj.wallet.*;
+import org.digibytej.core.TransactionConfidence.*;
+import org.digibytej.store.*;
+import org.digibytej.testing.*;
+import org.digibytej.wallet.*;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -29,7 +29,7 @@ import org.junit.runners.*;
 import java.math.*;
 import java.util.*;
 
-import static org.litecoinj.core.Utils.*;
+import static org.digibytej.core.Utils.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

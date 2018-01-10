@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.core.listeners.TransactionConfidenceEventListener;
-import org.litecoinj.core.TransactionConfidence.ConfidenceType;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.testing.FakeTxBuilder;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.utils.Threading;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.WalletTransaction;
-import org.litecoinj.wallet.listeners.WalletChangeEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.litecoinj.wallet.listeners.WalletReorganizeEventListener;
+import org.digibytej.core.listeners.TransactionConfidenceEventListener;
+import org.digibytej.core.TransactionConfidence.ConfidenceType;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.testing.FakeTxBuilder;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.utils.Threading;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.WalletTransaction;
+import org.digibytej.wallet.listeners.WalletChangeEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.digibytej.wallet.listeners.WalletReorganizeEventListener;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.litecoinj.core.Coin.*;
+import static org.digibytej.core.Coin.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

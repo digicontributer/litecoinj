@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.litecoinj.utils;
+package org.digibytej.utils;
 
-import static org.litecoinj.core.Coin.CENT;
-import static org.litecoinj.core.Coin.COIN;
-import static org.litecoinj.core.Coin.SATOSHI;
-import static org.litecoinj.core.Coin.ZERO;
+import static org.digibytej.core.Coin.CENT;
+import static org.digibytej.core.Coin.COIN;
+import static org.digibytej.core.Coin.SATOSHI;
+import static org.digibytej.core.Coin.ZERO;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Locale;
 
 import org.junit.Test;
 
-import org.litecoinj.core.Coin;
+import org.digibytej.core.Coin;
 
 public class MonetaryFormatTest {
 
-    private static final MonetaryFormat NO_CODE = MonetaryFormat.LTC.noCode();
+    private static final MonetaryFormat NO_CODE = MonetaryFormat.DGB.noCode();
 
     @Test
     public void testSigns() throws Exception {
@@ -210,14 +210,14 @@ public class MonetaryFormatTest {
 
     @Test
     public void standardCodes() throws Exception {
-        assertEquals("LTC 0.00", MonetaryFormat.LTC.format(Coin.ZERO).toString());
-        assertEquals("mBTC 0.00", MonetaryFormat.MLTC.format(Coin.ZERO).toString());
-        assertEquals("µBTC 0", MonetaryFormat.ULTC.format(Coin.ZERO).toString());
+        assertEquals("DGB 0.00", MonetaryFormat.DGB.format(Coin.ZERO).toString());
+        assertEquals("mBTC 0.00", MonetaryFormat.MDGB.format(Coin.ZERO).toString());
+        assertEquals("µBTC 0", MonetaryFormat.UDGB.format(Coin.ZERO).toString());
     }
 
     @Test
     public void customCode() throws Exception {
-        assertEquals("dBTC 0", MonetaryFormat.ULTC.code(1, "dBTC").shift(1).format(Coin.ZERO).toString());
+        assertEquals("dBTC 0", MonetaryFormat.UDGB.code(1, "dBTC").shift(1).format(Coin.ZERO).toString());
     }
 
     /**
@@ -225,25 +225,25 @@ public class MonetaryFormatTest {
      */
     @Test
     public void noCode() throws Exception {
-        assertEquals("0", MonetaryFormat.ULTC.noCode().shift(0).format(Coin.ZERO).toString());
+        assertEquals("0", MonetaryFormat.UDGB.noCode().shift(0).format(Coin.ZERO).toString());
         // Ensure that inserting a code after codes are wiped, works
-        assertEquals("dBTC 0", MonetaryFormat.ULTC.noCode().code(1, "dBTC").shift(1).format(Coin.ZERO).toString());
+        assertEquals("dBTC 0", MonetaryFormat.UDGB.noCode().code(1, "dBTC").shift(1).format(Coin.ZERO).toString());
     }
 
     @Test
     public void codeOrientation() throws Exception {
-        assertEquals("LTC 0.00", MonetaryFormat.LTC.prefixCode().format(Coin.ZERO).toString());
-        assertEquals("0.00 LTC", MonetaryFormat.LTC.postfixCode().format(Coin.ZERO).toString());
+        assertEquals("DGB 0.00", MonetaryFormat.DGB.prefixCode().format(Coin.ZERO).toString());
+        assertEquals("0.00 DGB", MonetaryFormat.DGB.postfixCode().format(Coin.ZERO).toString());
     }
 
     @Test
     public void codeSeparator() throws Exception {
-        assertEquals("LTC@0.00", MonetaryFormat.LTC.codeSeparator('@').format(Coin.ZERO).toString());
+        assertEquals("DGB@0.00", MonetaryFormat.DGB.codeSeparator('@').format(Coin.ZERO).toString());
     }
 
     @Test(expected = NumberFormatException.class)
     public void missingCode() throws Exception {
-        MonetaryFormat.ULTC.shift(1).format(Coin.ZERO);
+        MonetaryFormat.UDGB.shift(1).format(Coin.ZERO);
     }
 
     @Test
@@ -267,19 +267,19 @@ public class MonetaryFormatTest {
 
         assertEquals(Coin.CENT, NO_CODE.parse(".01"));
 
-        assertEquals(Coin.MILLICOIN, MonetaryFormat.MLTC.parse("1"));
-        assertEquals(Coin.MILLICOIN, MonetaryFormat.MLTC.parse("1.0"));
-        assertEquals(Coin.MILLICOIN, MonetaryFormat.MLTC.parse("01.0000000000"));
-        assertEquals(Coin.MILLICOIN, MonetaryFormat.MLTC.positiveSign('+').parse("+1.0"));
-        assertEquals(Coin.MILLICOIN.negate(), MonetaryFormat.MLTC.parse("-1"));
-        assertEquals(Coin.MILLICOIN.negate(), MonetaryFormat.MLTC.parse("-1.0"));
+        assertEquals(Coin.MILLICOIN, MonetaryFormat.MDGB.parse("1"));
+        assertEquals(Coin.MILLICOIN, MonetaryFormat.MDGB.parse("1.0"));
+        assertEquals(Coin.MILLICOIN, MonetaryFormat.MDGB.parse("01.0000000000"));
+        assertEquals(Coin.MILLICOIN, MonetaryFormat.MDGB.positiveSign('+').parse("+1.0"));
+        assertEquals(Coin.MILLICOIN.negate(), MonetaryFormat.MDGB.parse("-1"));
+        assertEquals(Coin.MILLICOIN.negate(), MonetaryFormat.MDGB.parse("-1.0"));
 
-        assertEquals(Coin.MICROCOIN, MonetaryFormat.ULTC.parse("1"));
-        assertEquals(Coin.MICROCOIN, MonetaryFormat.ULTC.parse("1.0"));
-        assertEquals(Coin.MICROCOIN, MonetaryFormat.ULTC.parse("01.0000000000"));
-        assertEquals(Coin.MICROCOIN, MonetaryFormat.ULTC.positiveSign('+').parse("+1.0"));
-        assertEquals(Coin.MICROCOIN.negate(), MonetaryFormat.ULTC.parse("-1"));
-        assertEquals(Coin.MICROCOIN.negate(), MonetaryFormat.ULTC.parse("-1.0"));
+        assertEquals(Coin.MICROCOIN, MonetaryFormat.UDGB.parse("1"));
+        assertEquals(Coin.MICROCOIN, MonetaryFormat.UDGB.parse("1.0"));
+        assertEquals(Coin.MICROCOIN, MonetaryFormat.UDGB.parse("01.0000000000"));
+        assertEquals(Coin.MICROCOIN, MonetaryFormat.UDGB.positiveSign('+').parse("+1.0"));
+        assertEquals(Coin.MICROCOIN.negate(), MonetaryFormat.UDGB.parse("-1"));
+        assertEquals(Coin.MICROCOIN.negate(), MonetaryFormat.UDGB.parse("-1.0"));
 
         assertEquals(Coin.CENT, NO_CODE.withLocale(new Locale("hi", "IN")).parse(".०१")); // Devanagari
     }

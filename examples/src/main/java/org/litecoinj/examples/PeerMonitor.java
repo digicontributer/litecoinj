@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.listeners.PeerConnectedEventListener;
-import org.litecoinj.core.listeners.PeerDisconnectedEventListener;
-import org.litecoinj.core.NetworkParameters;
-import org.litecoinj.core.Peer;
-import org.litecoinj.core.PeerGroup;
-import org.litecoinj.net.discovery.DnsDiscovery;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.utils.BriefLogFormatter;
+import org.digibytej.core.listeners.PeerConnectedEventListener;
+import org.digibytej.core.listeners.PeerDisconnectedEventListener;
+import org.digibytej.core.NetworkParameters;
+import org.digibytej.core.Peer;
+import org.digibytej.core.PeerGroup;
+import org.digibytej.net.discovery.DnsDiscovery;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

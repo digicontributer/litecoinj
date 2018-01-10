@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.litecoinj.testing;
+package org.digibytej.testing;
 
-import org.litecoinj.core.Sha256Hash;
-import org.litecoinj.crypto.ChildNumber;
-import org.litecoinj.crypto.DeterministicKey;
-import org.litecoinj.signers.CustomTransactionSigner;
-import org.litecoinj.wallet.DeterministicKeyChain;
+import org.digibytej.core.Sha256Hash;
+import org.digibytej.crypto.ChildNumber;
+import org.digibytej.crypto.DeterministicKey;
+import org.digibytej.signers.CustomTransactionSigner;
+import org.digibytej.wallet.DeterministicKeyChain;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;

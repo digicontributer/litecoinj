@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-package org.litecoinj.tools;
+package org.digibytej.tools;
 
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.*;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.RegTestParams;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.protocols.payments.PaymentProtocol;
-import org.litecoinj.protocols.payments.PaymentProtocolException;
-import org.litecoinj.protocols.payments.PaymentSession;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.store.*;
-import org.litecoinj.uri.BitcoinURI;
-import org.litecoinj.uri.BitcoinURIParseException;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.DeterministicSeed;
-import org.litecoinj.wallet.DeterministicUpgradeRequiredException;
-import org.litecoinj.wallet.DeterministicUpgradeRequiresPassword;
+import org.digibytej.core.*;
+import org.digibytej.crypto.*;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.RegTestParams;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.protocols.payments.PaymentProtocol;
+import org.digibytej.protocols.payments.PaymentProtocolException;
+import org.digibytej.protocols.payments.PaymentSession;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.store.*;
+import org.digibytej.uri.BitcoinURI;
+import org.digibytej.uri.BitcoinURIParseException;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.DeterministicSeed;
+import org.digibytej.wallet.DeterministicUpgradeRequiredException;
+import org.digibytej.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
@@ -45,19 +45,19 @@ import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
 
-import org.litecoinj.core.listeners.BlocksDownloadedEventListener;
-import org.litecoinj.core.listeners.DownloadProgressTracker;
-import org.litecoinj.wallet.MarriedKeyChain;
-import org.litecoinj.wallet.Protos;
-import org.litecoinj.wallet.SendRequest;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.WalletExtension;
-import org.litecoinj.wallet.WalletProtobufSerializer;
-import org.litecoinj.wallet.Wallet.BalanceType;
-import org.litecoinj.wallet.listeners.WalletChangeEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.litecoinj.wallet.listeners.WalletCoinsSentEventListener;
-import org.litecoinj.wallet.listeners.WalletReorganizeEventListener;
+import org.digibytej.core.listeners.BlocksDownloadedEventListener;
+import org.digibytej.core.listeners.DownloadProgressTracker;
+import org.digibytej.wallet.MarriedKeyChain;
+import org.digibytej.wallet.Protos;
+import org.digibytej.wallet.SendRequest;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.WalletExtension;
+import org.digibytej.wallet.WalletProtobufSerializer;
+import org.digibytej.wallet.Wallet.BalanceType;
+import org.digibytej.wallet.listeners.WalletChangeEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.digibytej.wallet.listeners.WalletCoinsSentEventListener;
+import org.digibytej.wallet.listeners.WalletReorganizeEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -80,7 +80,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 
-import static org.litecoinj.core.Coin.parseCoin;
+import static org.digibytej.core.Coin.parseCoin;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
@@ -104,7 +104,7 @@ public class WalletTool {
     private static File chainFileName;
     private static ValidationMode mode;
     private static String password;
-    private static org.litecoin.protocols.payments.Protos.PaymentRequest paymentRequest;
+    private static org.digibyte.protocols.payments.Protos.PaymentRequest paymentRequest;
     private static OptionSpec<Integer> lookaheadSize;
 
     public static class Condition {
@@ -990,7 +990,7 @@ public class WalletTool {
     }
 
     private static void sendPaymentRequest(String location, boolean verifyPki) {
-        if (location.startsWith("http") || location.startsWith("litecoin")) {
+        if (location.startsWith("http") || location.startsWith("digibyte")) {
             try {
                 ListenableFuture<PaymentSession> future;
                 if (location.startsWith("http")) {
@@ -1010,7 +1010,7 @@ public class WalletTool {
                 System.err.println("Error creating payment session " + e.getMessage());
                 System.exit(1);
             } catch (BitcoinURIParseException e) {
-                System.err.println("Invalid litecoin uri: " + e.getMessage());
+                System.err.println("Invalid digibyte uri: " + e.getMessage());
                 System.exit(1);
             } catch (InterruptedException e) {
                 // Ignore.
@@ -1028,7 +1028,7 @@ public class WalletTool {
                 System.exit(1);
             }
             try {
-                paymentRequest = org.litecoin.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
+                paymentRequest = org.digibyte.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
             } catch(IOException e) {
                 System.err.println("Failed to parse payment request from file " + e.getMessage());
                 System.exit(1);

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.params.*;
-import org.litecoinj.testing.*;
-import org.litecoinj.utils.*;
+import org.digibytej.params.*;
+import org.digibytej.testing.*;
+import org.digibytej.utils.*;
 import org.junit.*;
 
 import java.net.*;
 
-import static org.litecoinj.core.Coin.*;
+import static org.digibytej.core.Coin.*;
 import static org.junit.Assert.*;
 
 public class TxConfidenceTableTest {

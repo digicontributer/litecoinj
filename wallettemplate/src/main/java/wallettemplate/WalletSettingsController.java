@@ -16,9 +16,9 @@
 
 package wallettemplate;
 
-import org.litecoinj.core.Utils;
-import org.litecoinj.crypto.MnemonicCode;
-import org.litecoinj.wallet.DeterministicSeed;
+import org.digibytej.core.Utils;
+import org.digibytej.crypto.MnemonicCode;
+import org.digibytej.wallet.DeterministicSeed;
 import com.google.common.base.Splitter;
 import com.google.common.util.concurrent.Service;
 import javafx.application.Platform;
@@ -170,7 +170,7 @@ public class WalletSettingsController {
 
         long birthday = datePicker.getValue().atStartOfDay().toEpochSecond(ZoneOffset.UTC);
         DeterministicSeed seed = new DeterministicSeed(Splitter.on(' ').splitToList(wordsArea.getText()), null, "", birthday);
-        // Shut down litecoinj and restart it with the new seed.
+        // Shut down digibyte and restart it with the new seed.
         Main.bitcoin.addListener(new Service.Listener() {
             @Override
             public void terminated(Service.State from) {

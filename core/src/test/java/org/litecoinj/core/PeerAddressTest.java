@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.params.MainNetParams;
+import org.digibytej.params.MainNetParams;
 import org.junit.Test;
 
 import java.math.BigInteger;
 import java.net.InetAddress;
 
-import static org.litecoinj.core.Utils.HEX;
+import static org.digibytej.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 public class PeerAddressTest

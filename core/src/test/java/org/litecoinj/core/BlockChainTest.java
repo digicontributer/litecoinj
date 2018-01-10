@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.TestNet2Params;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.testing.FakeTxBuilder;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.Wallet.BalanceType;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.TestNet2Params;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.testing.FakeTxBuilder;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.Wallet.BalanceType;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import org.junit.rules.ExpectedException;
@@ -38,9 +38,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.testing.FakeTxBuilder.createFakeBlock;
-import static org.litecoinj.testing.FakeTxBuilder.createFakeTx;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.testing.FakeTxBuilder.createFakeBlock;
+import static org.digibytej.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 // Handling of chain splits/reorgs are in ChainSplitTests.
@@ -372,7 +372,7 @@ public class BlockChainTest {
         assertEquals(wallet.getBalance(BalanceType.ESTIMATED), FIFTY_COINS);
         assertTrue(coinbaseTransaction.isMature());
 
-        // Create a spend with the coinbase LTC to the address in the second wallet - this should now succeed.
+        // Create a spend with the coinbase DGB to the address in the second wallet - this should now succeed.
         Transaction coinbaseSend2 = wallet.createSend(addressToSendTo, valueOf(49, 0));
         assertNotNull(coinbaseSend2);
 

@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.litecoinj.protocols.payments;
+package org.digibytej.protocols.payments;
 
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.TrustStoreLoader;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.TestNet3Params;
+import org.digibytej.core.*;
+import org.digibytej.crypto.TrustStoreLoader;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.TestNet3Params;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
-import org.litecoin.protocols.payments.Protos;
+import org.digibyte.protocols.payments.Protos;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,7 +32,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static org.litecoinj.core.Coin.COIN;
+import static org.digibytej.core.Coin.COIN;
 import static org.junit.Assert.*;
 
 public class PaymentSessionTest {

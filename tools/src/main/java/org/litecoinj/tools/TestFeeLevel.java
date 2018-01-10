@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.litecoinj.tools;
+package org.digibytej.tools;
 
-import org.litecoinj.core.*;
-import org.litecoinj.core.listeners.PeerConnectedEventListener;
-import org.litecoinj.core.listeners.PeerDisconnectedEventListener;
-import org.litecoinj.kits.WalletAppKit;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.SendRequest;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.*;
+import org.digibytej.core.listeners.PeerConnectedEventListener;
+import org.digibytej.core.listeners.PeerDisconnectedEventListener;
+import org.digibytej.kits.WalletAppKit;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.SendRequest;
+import org.digibytej.wallet.Wallet;
 
 import java.io.File;
 

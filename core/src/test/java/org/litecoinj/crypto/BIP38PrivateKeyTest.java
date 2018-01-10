@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.litecoinj.crypto;
+package org.digibytej.crypto;
 
-import org.litecoinj.core.ECKey;
-import org.litecoinj.crypto.BIP38PrivateKey.BadPassphraseException;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.TestNet3Params;
+import org.digibytej.core.ECKey;
+import org.digibytej.crypto.BIP38PrivateKey.BadPassphraseException;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.TestNet3Params;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;

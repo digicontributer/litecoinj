@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.*;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.store.MemoryBlockStore;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.*;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.store.MemoryBlockStore;
+import org.digibytej.wallet.Wallet;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

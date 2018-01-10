@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import static org.litecoinj.core.Coin.*;
-import static org.litecoinj.core.NetworkParameters.MAX_MONEY;
+import static org.digibytej.core.Coin.*;
+import static org.digibytej.core.NetworkParameters.MAX_MONEY;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -122,10 +122,10 @@ public class CoinTest {
 
     @Test
     public void testToFriendlyString() {
-        assertEquals("1.00 LTC", COIN.toFriendlyString());
-        assertEquals("1.23 LTC", valueOf(1, 23).toFriendlyString());
-        assertEquals("0.001 LTC", COIN.divide(1000).toFriendlyString());
-        assertEquals("-1.23 LTC", valueOf(1, 23).negate().toFriendlyString());
+        assertEquals("1.00 DGB", COIN.toFriendlyString());
+        assertEquals("1.23 DGB", valueOf(1, 23).toFriendlyString());
+        assertEquals("0.001 DGB", COIN.divide(1000).toFriendlyString());
+        assertEquals("-1.23 DGB", valueOf(1, 23).negate().toFriendlyString());
     }
 
     /**

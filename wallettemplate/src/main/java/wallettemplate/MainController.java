@@ -16,9 +16,9 @@
 
 package wallettemplate;
 
-import org.litecoinj.core.listeners.DownloadProgressTracker;
-import org.litecoinj.core.Coin;
-import org.litecoinj.utils.MonetaryFormat;
+import org.digibytej.core.listeners.DownloadProgressTracker;
+import org.digibytej.core.Coin;
+import org.digibytej.utils.MonetaryFormat;
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
@@ -57,7 +57,7 @@ public class MainController {
     public void onBitcoinSetup() {
         model.setWallet(bitcoin.wallet());
         addressControl.addressProperty().bind(model.addressProperty());
-        balance.textProperty().bind(EasyBind.map(model.balanceProperty(), coin -> MonetaryFormat.LTC.noCode().format(coin).toString()));
+        balance.textProperty().bind(EasyBind.map(model.balanceProperty(), coin -> MonetaryFormat.DGB.noCode().format(coin).toString()));
         // Don't let the user click send money when the wallet is empty.
         sendMoneyOutBtn.disableProperty().bind(model.balanceProperty().isEqualTo(Coin.ZERO));
 

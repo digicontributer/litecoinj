@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
-import org.litecoinj.params.UnitTestParams;
+import org.digibytej.params.UnitTestParams;
 import org.junit.Test;
 
 public class MessageTest {

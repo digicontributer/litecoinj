@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.litecoinj.utils;
+package org.digibytej.utils;
 
-import static org.litecoinj.utils.Fiat.parseFiat;
+import static org.digibytej.utils.Fiat.parseFiat;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;

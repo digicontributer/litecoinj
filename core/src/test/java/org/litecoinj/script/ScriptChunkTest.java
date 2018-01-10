@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.litecoinj.script;
+package org.digibytej.script;
 
-import static org.litecoinj.script.ScriptOpCodes.OP_PUSHDATA1;
-import static org.litecoinj.script.ScriptOpCodes.OP_PUSHDATA2;
-import static org.litecoinj.script.ScriptOpCodes.OP_PUSHDATA4;
+import static org.digibytej.script.ScriptOpCodes.OP_PUSHDATA1;
+import static org.digibytej.script.ScriptOpCodes.OP_PUSHDATA2;
+import static org.digibytej.script.ScriptOpCodes.OP_PUSHDATA4;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 

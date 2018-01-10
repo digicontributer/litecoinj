@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.litecoinj.core;
+package org.digibytej.core;
 
 import com.google.common.collect.Lists;
-import org.litecoinj.params.MainNetParams;
-import org.litecoinj.params.UnitTestParams;
-import org.litecoinj.script.Script;
-import org.litecoinj.store.BlockStoreException;
-import org.litecoinj.store.FullPrunedBlockStore;
-import org.litecoinj.utils.BlockFileLoader;
-import org.litecoinj.utils.BriefLogFormatter;
-import org.litecoinj.wallet.SendRequest;
-import org.litecoinj.wallet.Wallet;
-import org.litecoinj.wallet.WalletTransaction;
+import org.digibytej.params.MainNetParams;
+import org.digibytej.params.UnitTestParams;
+import org.digibytej.script.Script;
+import org.digibytej.store.BlockStoreException;
+import org.digibytej.store.FullPrunedBlockStore;
+import org.digibytej.utils.BlockFileLoader;
+import org.digibytej.utils.BriefLogFormatter;
+import org.digibytej.wallet.SendRequest;
+import org.digibytej.wallet.Wallet;
+import org.digibytej.wallet.WalletTransaction;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.litecoinj.core.Coin.FIFTY_COINS;
+import static org.digibytej.core.Coin.FIFTY_COINS;
 import static org.junit.Assert.*;
 import org.junit.rules.ExpectedException;
 
@@ -257,7 +257,7 @@ public abstract class AbstractFullPrunedBlockChainTest {
         }
         rollingBlock = rollingBlock.createNextBlock(null);
 
-        // Create litecoin spend of 1 LTC.
+        // Create digibyte spend of 1 DGB.
         ECKey toKey = new ECKey();
         Coin amount = Coin.valueOf(100000000);
         Address address = new Address(PARAMS, toKey.getPubKeyHash());
@@ -308,7 +308,7 @@ public abstract class AbstractFullPrunedBlockChainTest {
         }
         rollingBlock = rollingBlock.createNextBlock(null);
 
-        // Create 1 LTC spend to a key in this wallet (to ourselves).
+        // Create 1 DGB spend to a key in this wallet (to ourselves).
         Wallet wallet = new Wallet(PARAMS);
         assertEquals("Available balance is incorrect", Coin.ZERO, wallet.getBalance(Wallet.BalanceType.AVAILABLE));
         assertEquals("Estimated balance is incorrect", Coin.ZERO, wallet.getBalance(Wallet.BalanceType.ESTIMATED));
@@ -324,7 +324,7 @@ public abstract class AbstractFullPrunedBlockChainTest {
         rollingBlock.solve();
         chain.add(rollingBlock);
 
-        // Create another spend of 1/2 the value of LTC we have available using the wallet (store coin selector).
+        // Create another spend of 1/2 the value of DGB we have available using the wallet (store coin selector).
         ECKey toKey2 = new ECKey();
         Coin amount2 = amount.divide(2);
         Address address2 = new Address(PARAMS, toKey2.getPubKeyHash());
@@ -340,7 +340,7 @@ public abstract class AbstractFullPrunedBlockChainTest {
             totalPendingTxAmount = totalPendingTxAmount.add(tx.getValueSentToMe(wallet));
         }
 
-        // The availbale balance should be the 0 (as we spent the 1 LTC that's pending) and estimated should be 1/2 - fee LTC
+        // The availbale balance should be the 0 (as we spent the 1 DGB that's pending) and estimated should be 1/2 - fee DGB
         assertEquals("Available balance is incorrect", Coin.ZERO, wallet.getBalance(Wallet.BalanceType.AVAILABLE));
         assertEquals("Estimated balance is incorrect", amount2.subtract(fee), wallet.getBalance(Wallet.BalanceType.ESTIMATED));
         assertEquals("Pending tx amount is incorrect", amount2.subtract(fee), totalPendingTxAmount);

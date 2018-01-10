@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.litecoinj.examples;
+package org.digibytej.examples;
 
-import org.litecoinj.core.listeners.DownloadProgressTracker;
-import org.litecoinj.core.*;
-import org.litecoinj.net.discovery.DnsDiscovery;
-import org.litecoinj.params.TestNet3Params;
-import org.litecoinj.store.SPVBlockStore;
-import org.litecoinj.wallet.DeterministicSeed;
-import org.litecoinj.wallet.Wallet;
+import org.digibytej.core.listeners.DownloadProgressTracker;
+import org.digibytej.core.*;
+import org.digibytej.net.discovery.DnsDiscovery;
+import org.digibytej.params.TestNet3Params;
+import org.digibytej.store.SPVBlockStore;
+import org.digibytej.wallet.DeterministicSeed;
+import org.digibytej.wallet.Wallet;
 
 import java.io.File;
 

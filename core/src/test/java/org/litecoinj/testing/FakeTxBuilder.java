@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.litecoinj.testing;
+package org.digibytej.testing;
 
-import org.litecoinj.core.*;
-import org.litecoinj.crypto.TransactionSignature;
-import org.litecoinj.script.ScriptBuilder;
-import org.litecoinj.store.BlockStore;
-import org.litecoinj.store.BlockStoreException;
+import org.digibytej.core.*;
+import org.digibytej.crypto.TransactionSignature;
+import org.digibytej.script.ScriptBuilder;
+import org.digibytej.store.BlockStore;
+import org.digibytej.store.BlockStoreException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
-import static org.litecoinj.core.Coin.*;
+import static org.digibytej.core.Coin.*;
 import static com.google.common.base.Preconditions.checkState;
 
 public class FakeTxBuilder {
@@ -148,11 +148,11 @@ public class FakeTxBuilder {
     }
 
     /**
-     * Transaction[0] is a feeder transaction, supplying LTC to Transaction[1]
+     * Transaction[0] is a feeder transaction, supplying DGB to Transaction[1]
      */
     public static Transaction[] createFakeTx(NetworkParameters params, Coin value,
                                              Address to, Address from) {
-        // Create fake TXes of sufficient realism to exercise the unit tests. This transaction send LTC from the
+        // Create fake TXes of sufficient realism to exercise the unit tests. This transaction send DGB from the
         // from address, to the to address with to one to somewhere else to simulate change.
         Transaction t = new Transaction(params);
         TransactionOutput outputToMe = new TransactionOutput(params, t, value, to);
